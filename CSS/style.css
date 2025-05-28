@@ -1,0 +1,42 @@
+h1 {
+    color: red;
+}
+p {
+    color: rgb(0, 255, 60);
+}
+button {
+    color: orange;
+    background-color: green;
+}
+body {
+    background-color: cornflowerblue;
+}
+#headingone{
+    color:blue;
+}
+#headingtwo{
+    color:pink;
+}
+.sameclass{
+    color:yellow;
+}
+div > p{
+    color: black;
+    background-color: yellowgreen;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a:link{
+    color: red;
+}
+a:visited{
+    color: green;
+}
+a:active{
+    background-color: orangered;
+}
+a:hover{
+    background-color: cyan;
+}
