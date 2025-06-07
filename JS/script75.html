@@ -1,34 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        console.log("Harsh is a hacker");
-        console.log("Himanshu is a hecker");
-        setTimeout(() => {
-            console.log("I am inside setTimeout");
-        }, 2000);
-        console.log("The End");
+        // console.log("Harsh is a hacker");
+        // console.log("Himanshu is a hecker");
+        // setTimeout(() => {
+        //     console.log("I am inside setTimeout");
+        // }, 2000);
+        // console.log("The End");
+        // const fn = () => {
+        //     console.log("Nothing");
+        // }
+        // const callback = (arg, fn) => {
+        //     console.log(arg);
+        //     fn();
+        // }
+        // const loadScript = (src, callback) => {
+        //     let sc = document.createElement("script");
+        //     sc.src = src;
+        //     sc.onload = callback("Harsh", fn);
+        //     document.head.append(sc);
+        // }
+        // loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", callback);
 
 
-        const fn = () => {
-            console.log("Nothing");
-        }
-        const callback = (arg, fn) => {
-            console.log(arg);
-            fn();
-        }
-        const loadScript = (src, callback) => {
-            let sc = document.createElement("script");
-            sc.src = src;
-            sc.onload = callback("Harsh", fn);
-            document.head.append(sc);
-        }
-        loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", callback);
+        console.log("this is promises");
+        let prom1 = new Promise((resolve, reject) => {
+            let a = Math.random();
+            if (a < 0.5) {
+                setTimeout(() => {
+                    console.log("Yes I am done.");
+                    resolve("Harsh");
+                }, 3000);
+            }
+            else {
+                console.log("No, the random number was not supporting you.");
+            }
+        })
+        
+        let prom2 = new Promise((resolve, reject) => {
+            let a = Math.random();
+            if (a < 0.5) {
+                setTimeout(() => {
+                    console.log("Yes I am done 2.");
+                    resolve("Harsh 2");
+                }, 2000);
+            }
+            else {
+                console.log("No, the random number was not supporting you 2.");
+            }
+        })
+        let prom3 = Promise.all([prom1, prom2]);
+        prom3.then((a) => {
+            console.log(a);
+        }).catch((err) => {
+            console.log(err);
+        })
     </script>
 </body>
+
 </html>
